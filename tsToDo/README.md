@@ -13,3 +13,7 @@ Adding types for completeAll
 CompletedTodo Type
 Intersection types
 Implementing completeAll with map and spread operator
+
+Section #3
+Union 
+Optional properties
