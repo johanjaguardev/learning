@@ -31,12 +31,18 @@ function App() {
   )
 }
 
+type Todo = Readonly<{
+  id: number
+  text: string
+  done: boolean
+}>
 
-// function toggleTodo(todo) {
-//   return {
-//     text: todo.text,
-//     done: !todo.done
-//   }
-// }
+function toggleTodo(todo: Todo): Todo {
+  return {
+    id: todo.id,
+    text: todo.text,
+    done: !todo.done
+  }
+}
 
 export default App
