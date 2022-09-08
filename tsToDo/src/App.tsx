@@ -37,12 +37,25 @@ type Todo = Readonly<{
   done: boolean
 }>
 
+type CompletedTodo = Todo & {
+  readonly done: true
+}
+
 function toggleTodo(todo: Todo): Todo {
   return {
     id: todo.id,
     text: todo.text,
     done: !todo.done
   }
+}
+
+function completeAll(
+  todos: readonly Todo[]
+): CompletedTodo[] {
+  return todos.map(todo => ({
+    ...todo,
+    done: true
+  }))
 }
 
 export default App
