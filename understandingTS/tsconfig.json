@@ -2,7 +2,14 @@
   "compilerOptions": {
     "rootDir": "ts",
     "outDir": "dist",
-    "module": "commonjs"
-  },
-  "include": ["ts/src/**/*", "ts/tests/**/*"]
+    "target": "es2019",
+    "lib": [
+      "es2019"
+    ],
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "strict": true,
+    "declaration": true,
+    "sourceMap": true
+  }
 }
