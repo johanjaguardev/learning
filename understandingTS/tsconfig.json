@@ -3,5 +3,6 @@
     "rootDir": "ts",
     "outDir": "dist",
     "module": "commonjs"
-  }
+  },
+  "include": ["ts/src/**/*", "ts/tests/**/*"]
 }
