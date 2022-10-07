@@ -1,6 +1,33 @@
 import { expect, it } from "vitest";
 
-export const getName = (params: { first: string; last: string }) => {
+// Solution 1
+// export const getName = (params: { first: string; last?: string }) => {
+//   if (params.last) {
+//     return `${params.first} ${params.last}`;
+//   }
+//   return params.first;
+// };
+
+// Solution 2
+// type GetNameArgs = {
+//   first: string,
+//   last?: string
+// }
+
+// export const getName = (params: GetNameArgs) => {
+//   if (params.last) {
+//     return `${params.first} ${params.last}`;
+//   }
+//   return params.first;
+// };
+
+// Solution 3
+interface GetNameArgs {
+  first: string,
+  last?: string
+}
+
+export const getName = (params: GetNameArgs) => {
   if (params.last) {
     return `${params.first} ${params.last}`;
   }
