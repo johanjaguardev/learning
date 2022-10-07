@@ -1,6 +1,28 @@
 import { expect, it } from "vitest";
+import { string } from "zod";
 
-export const addTwoNumbers = (params) => {
+
+
+
+// Solution 1
+// export const addTwoNumbers = (params: {first: number, second: number}) => {
+//   return params.first + params.second;
+// };
+
+
+// Solution 2
+// type AddTwoNumbersArgs = {
+//   first: number,
+//   second: number
+// }
+
+// Solution 3
+interface AddTwoNumbersArgs {
+  first: number,
+  second: number
+}
+
+export const addTwoNumbers = (params: AddTwoNumbersArgs) => {
   return params.first + params.second;
 };
 
