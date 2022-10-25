@@ -22,4 +22,12 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 `;
 
 setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
-royalNames();
+const namesArray: string[] = [
+  "Louis IX",
+  "Louis VIII",
+  "Philippe I",
+  "Philip L",
+  "Philip II",
+  "Philip I",
+];
+console.log(royalNames(namesArray));
