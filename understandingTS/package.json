@@ -1,0 +1,32 @@
+{
+  "name": "understanding-ts",
+  "version": "1.0.0",
+  "description": "Only for learning TS purpose",
+  "type": "commonjs",
+  "main": "./dist/src/index.d.js",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "clean": "shx rm -rf dist/*",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "mocha --ui qunit",
+    "testall": "mocha --ui qunit dist/test",
+    "prepack": "npm run clean && npm run build"
+  },
+  "// devDependencies": {
+    "@types/node": "Needed for unit test assertions (assert.equal() etc.)",
+    "shx": "Needed for development-time package.json scripts"
+  },
+  "author": "Johan Vargas Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.186",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.8.2",
+    "mocha": "^10.0.0",
+    "shx": "^0.3.4"
+  }
+}
