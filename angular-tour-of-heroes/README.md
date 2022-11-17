@@ -1,3 +1,7 @@
+- Create app and first component
+- Create Interface and some css and data binding
+- create new hero detail components
+
 # AngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
