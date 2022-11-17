@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IHero } from './hero';
-import { HEROES } from '../mock-heroes';
+import { IHero } from '../IHero';
+import { HeroService } from '../hero.service';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-heroes',
@@ -8,16 +9,24 @@ import { HEROES } from '../mock-heroes';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  heroes = HEROES;
+  heroes: IHero[] = [];
   selectedHero?: IHero;
 
-  constructor() {}
+  constructor(
+    private heroService: HeroService,
+    private messageService: MessageService
+  ) {}
+
+  getHeroes(): void {
+    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
+  }
 
   onSelect(hero: IHero): void {
     this.selectedHero = hero;
+    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.getHeroes();
   }
 }

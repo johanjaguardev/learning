@@ -1,6 +1,7 @@
 - Create app and first component
 - Create Interface and some css and data binding
 - create new hero detail components
+- Create message service and component
 
 # AngularTourOfHeroes
 

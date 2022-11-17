@@ -1,4 +1,4 @@
-import { IHero } from './heroes/hero';
+import { IHero } from './IHero';
 
 export const HEROES: IHero[] = [
   { id: 12, name: 'Dr. Nice' },
