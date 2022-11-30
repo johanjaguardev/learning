@@ -1,0 +1,45 @@
+.App {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.squares__container {
+  display: grid;
+  grid-template-areas:
+    "a b c"
+    "d . ."
+    "e f g";
+  gap: 20px;
+  width: 200px;
+}
+
+.square {
+  $side: 60px;
+  border: 1px solid black;
+  height: $side;
+  width: $side;
+
+  &:nth-child(1) {
+    grid-area: a;
+  }
+  &:nth-child(2) {
+    grid-area: b;
+  }
+  &:nth-child(3) {
+    grid-area: c;
+  }
+  &:nth-child(4) {
+    grid-area: d;
+  }
+  &:nth-child(5) {
+    grid-area: e;
+  }
+  &:nth-child(6) {
+    grid-area: f;
+  }
+  &:nth-child(7) {
+    grid-area: g;
+  }
+}
