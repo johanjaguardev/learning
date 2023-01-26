@@ -1,0 +1,32 @@
+body {
+  background-color: darksalmon;
+}
+
+div {
+  background-color: yellow;
+}
+
+p {
+  background-color: yellow;
+  color: black;
+  font-size: 42px;
+}
+
+button {
+  background-color: red;
+  color: pink;
+}
+
+.negro {
+  background-color: black;
+  color: cyan;
+}
+
+.letra-verde {
+  color: lime;
+}
+
+/* #boton {
+  background-color: green;
+  color: purple;
+} */
