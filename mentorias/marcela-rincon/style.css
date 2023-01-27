@@ -8,13 +8,14 @@ div {
 
 p {
   background-color: yellow;
-  color: black;
   font-size: 42px;
 }
 
 button {
   background-color: red;
   color: pink;
+  font-size: 55px;
+  text-transform: uppercase;
 }
 
 .negro {
@@ -24,6 +25,14 @@ button {
 
 .letra-verde {
   color: lime;
+}
+
+div.centrado p {
+  color: red;
+}
+
+.izquierda p {
+  color: blue;
 }
 
 /* #boton {
